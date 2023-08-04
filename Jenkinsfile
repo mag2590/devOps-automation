@@ -21,7 +21,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u mag2590 -p ${dockerhubpwd}'
+                   sh 'docker login -u mag443 -p ${dockerhubpwd}'
 
 }
                    sh 'docker push mag2590/devops-integration'
