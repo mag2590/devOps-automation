@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t mag2590/devops-integration .'
+                    sh 'docker build -t mag443/devops-integration .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u mag443 -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push mag2590/devops-integration'
+                   sh 'docker push mag443/devops-integration'
                 }
             }
         }
